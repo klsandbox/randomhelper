@@ -27,7 +27,7 @@ class RandomHelper {
     }
 
     public static function getEmailFromName($name) {
-        $email = str_replace(" ", "", $name) . '@' . self::hostname;
+        $email = str_replace(" ", "", $name) . '@' . self::$hostname;
         return $email;
     }
 
