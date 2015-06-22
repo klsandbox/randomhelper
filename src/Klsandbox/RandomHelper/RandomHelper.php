@@ -4,7 +4,7 @@ namespace Klsandbox\RandomHelper;
 
 class RandomHelper {
     
-    private $hostname = 'raniagold.com.my';
+    private static $hostname = 'raniagold.com.my';
 
     public static function randomIcNumber() {
         $start = mt_rand(800000, 900000);
@@ -27,7 +27,7 @@ class RandomHelper {
     }
 
     public static function getEmailFromName($name) {
-        $email = str_replace(" ", "", $name) . '@' . $this->hostname;
+        $email = str_replace(" ", "", $name) . '@' . self::hostname;
         return $email;
     }
 
