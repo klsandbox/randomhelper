@@ -16,7 +16,7 @@ class RandomHelper {
         $start = mt_rand(100000, 900000);
         $mid = mt_rand(10, 99);
         $end = mt_rand(1000, 9999);
-        return $start . "-" . $mid . "-" . $end;
+        return $start . $mid . $end;
     }
 
     public static function getRandomBank() {
