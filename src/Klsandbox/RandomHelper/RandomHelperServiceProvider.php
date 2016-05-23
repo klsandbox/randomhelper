@@ -4,8 +4,8 @@ namespace Klsandbox\RandomHelper;
 
 use Illuminate\Support\ServiceProvider;
 
-class RandomHelperServiceProvider extends ServiceProvider {
-
+class RandomHelperServiceProvider extends ServiceProvider
+{
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -18,7 +18,8 @@ class RandomHelperServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function register() {
+    public function register()
+    {
         //
     }
 
@@ -27,14 +28,15 @@ class RandomHelperServiceProvider extends ServiceProvider {
      *
      * @return array
      */
-    public function provides() {
+    public function provides()
+    {
         return [];
     }
 
-    public function boot() {
+    public function boot()
+    {
         $this->publishes([
-            __DIR__ . '/../../../config/' => config_path()
+            __DIR__ . '/../../../config/' => config_path(),
                 ], 'config');
     }
-
 }
